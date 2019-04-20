@@ -1,0 +1,24 @@
+.TheFormHeadLine{
+  color: #808080;
+  text-align: center;
+  font-weight: bold;
+.topHeadLine{
+  color:#00FA9A;
+}
+}
+#contactForm{
+  text-align: center;
+  position: relative;
+  top:125px;
+}
+.firstName{
+color: white;
+display: inline-block;
+margin-bottom: 8px;
+}
+.lastName{
+  @extend .firstName;
+}
+.email{
+  @extend .firstName;
+}

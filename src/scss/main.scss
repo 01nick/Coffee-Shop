@@ -1,0 +1,134 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "contact";
+@import "menu";
+
+body{
+   background-color: #180B09;
+}
+.btn{
+  background-color: #1a0d00;
+  color: #00FA9A;
+  border: none;
+  font-size: 18px;
+  margin: 10px 10px 0 5px;
+  padding: 0 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color .6s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    background-color: #ccffee;
+  }
+}
+h1{
+  color: #00FA9A;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 50px 0 10px 0;
+}
+.slideshow-container{
+  width: 900px;
+  position: relative;
+  margin: auto;
+.slides{
+  display: none;
+.number{
+  position: absolute;
+  padding: 8px 12px;
+  color: #808080;
+  }
+ }
+}
+.text{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  bottom: 8px;
+  color: #f2f2f2;
+  background-color: rgb(99,76,59);
+   }
+   #img1{
+     display: block;
+   }
+.prev, .next{
+  position: absolute;
+  top: 50%;
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 0 10px;
+  border-radius: 3px 3px 3px 3px;
+  &:hover{
+    cursor: pointer;
+    background-color: #808080;
+
+  }
+}
+.next{
+  right: 0;
+}
+
+.aboutSection{
+  width: 900px;
+  height: 250px;
+  border: solid white 2px;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #e6fff7;
+.welcomeImg{
+  width: 35%;
+  height: inherit;
+  float: left;
+ }
+}
+  h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0 15px 0;
+    position: relative;
+    left: 10px;
+   }
+
+.discountTitle{
+  background-color: red;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.discounts{
+  border: solid gray 1px;
+  width: 900px;
+  margin: auto;
+  margin-top: 2px;
+.firstDiscount{
+    border: solid gray 2px;
+    display: inline-block;
+.fdtext{
+      border-top: solid gray 2px;
+      background-color: #f8f8f8;
+      text-align: center;
+      font-style: oblique;
+      span{
+        font-size: 14px;
+        color: rgb(128,128,128);
+      }
+    }
+  }
+}
+.secondDiscount{
+  @extend .firstDiscount;
+  .sdtext{
+    @extend .fdtext;
+  }
+}
+.thirdDiscount{
+  @extend .firstDiscount;
+  .tdtext{
+    @extend .fdtext;
+  }
+}

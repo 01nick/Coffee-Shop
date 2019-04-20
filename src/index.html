@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coffee Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.scss">
+  </head>
+  <body> <script src="./js/index.js"></script>
+  <!--start of the header-->
+    <header>
+      <a class="btn" href="index.html"> Home</a>
+      <a class="btn" href="menu.html">Menu </a>
+      <a class="btn" href="contact.html"> Contact </a>
+    </header>
+  <!-- end of the header-->
+
+<h1 class="title"> THE COFFEE SHOP</h1>
+  <!-- start of the slideshow content-->
+          <div class="slideshow-container">
+              <div class="slides" id="img1">
+                  <div class="number"> 1 / 4 </div>
+                  <div> <img src="https://media.istockphoto.com/photos/cup-of-coffee-with-coffee-beans-picture-id521697444?k=6&m=521697444&s=612x612&w=0&h=SxY5Wm0XsZ2KS7yUZpSNe2DauPdKLO_i60Ew6RPZ6QM=" alt=" "image" height="450" width="900""></div>
+                  <div class="text"> Brewing the perfect cup </div>
+              </div>
+              <div class="slides" id="img2">
+                  <div class="number"> 2 / 4 </div>
+                  <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL3rQTCulFQQlpqo3W066U-FffDQdU_P-qofhOZsXJzjNbChpC"  alt=" "image" height="450" width="900""></div>
+                  <div class="text"> Come on in and warm your heart </div>
+              </div>
+              <div class="slides" id="img3">
+                  <div class="number"> 3 / 4 </div>
+                  <div> <img src="http://www.spotcoffee.com/wp-content/uploads/2017/01/hp-slide1.jpg"  alt=" "image" height="450" width="900""></div>
+                  <div class="text"> Fresh & tasty food </div>
+              </div>
+              <div class="slides" id="img4">
+                  <div class="number"> 4 / 4 </div>
+                  <div> <img src="https://cdn-ami-drupal.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/cup-of-coffee.jpg?itok=KbVfEgYp&timestamp=1382022480"  alt=" "image" height="450" width="900""></div>
+                  <div class="text"> Made fresh every single day </div>
+              </div>
+              <a class="prev" onclick="plusIndex(-1)">&#10094;</a>
+              <a class="next" onclick="plusIndex(1)">&#10095;</a>
+          </div>
+  <!-- end of the imageslider-->
+<!-- start of the about section-->
+<section class="aboutSection">
+    <img class="welcomeImg"src="http://cdn.shopify.com/s/files/1/0271/7209/files/brewing-water-death-wish-coffee.jpg?v=1534873777">
+    <h3> Welcome </h3>
+    <p class="blog"> The Coffee Shop is located at 2569 Franklen Blvd Orlando, FL proudly serves freshly brewed Coffee, driven from our signature coffee beans, and piping hot filter water.<br/>
+we offer a range of delicious snacks, that will accomindate your customizable coffee. Were proud to be serving our community for the last 30 years. <br/> <br/> we offer discounts to our early risers look down below to see what we our offering that day. </p>
+</section>
+<!-- end of the about section-->
+
+<!-- start of the discount section -->
+<section class="discounts">
+<ul class="discountTitle">
+  <li>Check Out Our Discounts! </li>
+</ul>
+<ul class="firstDiscount">
+  <li class=" fdpic"> <img src="https://www.seriouseats.com/recipes/images/2011/08/20110817-166611-flour-croissants.jpg" alt=" "image" width="290" height="250" "> </li>
+  <li class= "fdtext"> 1 Free Corrisant!! <br /> <span> between 4:00am-7:00am daily </span> </li>
+</ul>
+<ul class="secondDiscount">
+  <li class="sdpic"> <img src="https://the10pro.com/wp-content/uploads/2017/08/5-Large-Coffee-Mug-Double-Wall-Glass-16-oz-e1503941474441.jpg" alt=" "image" width="290" height="250" "> </li>
+  <li class="sdtext">75% off of Large Coffee <br /> <span> All Day On Wednesday!! </li>
+</ul>
+<ul class="thirdDiscount">
+  <li class="tdpic"> <img src="https://www.offthegridnews.com/wp-content/uploads/2014/09/coffee-grounds-firetradecoffee.jpg" alt=" "image" width="298" height="250" "> </li>
+  <li class="tdtext"> 1 bag of our Coffee Grounds <br /> for $7.99 </li>
+</ul>
+</section>
+<script>
+let sliderImages = document.querySelectorAll('.slides'),
+    arrowLeft = document.querySelector('.prev'),
+    arrowRight = document.querySelector('.next'),
+    current = 0;
+// creating the reset
+function reset(){
+  for(let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = 'none';
+  }
+}
+// init slider
+function startSlide(){
+  reset();
+  sliderImages[0].style.display = 'block';
+}
+// show prev
+function slideLeft(){
+  reset();
+  sliderImages[current -1].style.display = 'block';
+  current --;
+}
+
+// left arrow onclick
+arrowLeft.addEventListener('click', function(){
+  if ( current === 0){
+    current= sliderImages.length;
+  }
+  slideLeft();
+});
+
+// show next
+function slideRight(){
+  reset();
+  sliderImages[current + 1].style.display = 'block';
+  current ++;
+}
+
+// right arrow onclick
+arrowRight.addEventListener('click', function(){
+  if ( current === sliderImages.length - 1){
+    current= -1;
+  }
+  slideRight();
+});
+startSlide();
+  </script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+.theMenu{
+  color: #00FA9A;
+  font-size: 35px;
+  font-style: oblique;
+  margin-top: 50px;
+}
+.theNav{
+  text-align: center;
+  color: black;
+}
+.food{
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 12px;
+  position: relative;
+  background-color: #71CFB5;
+  cursor: pointer;
+  &:hover{
+    & > .coffeeList, .foodList, .drinkType{
+      visibility: visible;
+      cursor: pointer;
+      background-color: #1A2D59;
+    }
+  }
+}
+  .coffeeList{
+    position: absolute;
+    //display: none;
+    visibility: hidden;
+    top: 37px;
+    left: 0px;
+    width: 130px;
+  }
+    .drinkType{
+      display: block;
+      padding: 10px;
+      border: solid black 1px;
+      text-align: center;
+      background-color: #327A75;
+      color: #C8FCF3;
+      transition: background-color .7s ease-in-out;
+      &:hover{
+        & > .liquid1, .liquid2, .liquid3, .liquid4, .liquid5{
+          visibility: visible;
+          cursor: pointer;
+        }
+        & >.drinks2, .drinks3, .drinks4, .drinks5, .drinks{
+          background-color: #00072A;
+        }
+      }
+    }
+    .liquid1{
+        position: absolute;
+        visibility: hidden;
+        bottom: 44px;
+        left: 120px;
+        width: 130px;
+        padding: 10px;
+      }
+        .drinks{
+          display: block;
+          padding: 10px;
+          border: solid black 1px;
+          text-align: center;
+          background-color: #044C49;
+          transition: background-color .7s ease-in-out;
+          position: relative;
+          top: 18px;
+        }
+
+          .liquid2{
+            position: absolute;
+            visibility: hidden;
+            top: 28px;
+            left: 120px;
+            width: 130px;
+            padding: 10px;
+          }
+            .drinks2{
+              @extend .drinks;
+            }
+            .liquid3{
+              position: absolute;
+              visibility: hidden;
+              top: 66px;
+              left: 120px;
+              width: 130px;
+              padding: 10px;
+            }
+            .drinks3{
+              @extend .drinks;
+            }
+            .foodList{
+              position: absolute;
+              visibility: hidden;
+              top: 37px;
+              left: 0px;
+              width: 130px;
+            }
+            .liquid4{
+              position: absolute;
+              visibility: hidden;
+              top: -10px;
+              left: 120px;
+              width: 130px;
+              padding: 10px;
+            }
+            .drinks4{
+              @extend .drinks;
+            }
+            .liquid5{
+              position: absolute;
+              visibility: hidden;
+              top: 27px;
+              left: 120px;
+              width: 130px;
+              padding: 10px;
+            }
+            .drinks5{
+              @extend .drinks;
+            }
