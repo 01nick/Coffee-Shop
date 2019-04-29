@@ -29,7 +29,7 @@ h1{
   margin: 50px 0 10px 0;
 }
 .slideshow-container{
-  width: 900px;
+  width: 67%;
   position: relative;
   margin: auto;
 .slides{
@@ -40,6 +40,10 @@ h1{
   color: #808080;
   }
  }
+}
+.the-slide-image{
+  width: 100%;
+  height: 450px;
 }
 .text{
   text-align: center;
@@ -72,7 +76,7 @@ h1{
 }
 
 .aboutSection{
-  width: 900px;
+  width: 67%;
   height: 250px;
   border: solid white 2px;
   position: relative;
@@ -82,6 +86,7 @@ h1{
   background-color: #e6fff7;
 .welcomeImg{
   width: 35%;
+  min-width: 150px;
   height: inherit;
   float: left;
  }
@@ -102,12 +107,14 @@ h1{
 }
 .discounts{
   border: solid gray 1px;
-  width: 900px;
+  width: 67%;
   margin: auto;
   margin-top: 2px;
 .firstDiscount{
     border: solid gray 2px;
     display: inline-block;
+    width: 32.5%;
+    min-width: 240px;
 .fdtext{
       border-top: solid gray 2px;
       background-color: #f8f8f8;
@@ -130,5 +137,19 @@ h1{
   @extend .firstDiscount;
   .tdtext{
     @extend .fdtext;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .aboutSection{
+    width: 67%;
+    height: 250px;
+    border: solid white 2px;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #e6fff7;
+    overflow-y: scroll;
   }
 }
